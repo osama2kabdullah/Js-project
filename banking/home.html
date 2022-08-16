@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: arial;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #fff;
+        }
+
+        .div2 {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: .2em;
+        }
+
+        .div {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: .2em;
+        }
+
+        .div-child {
+            margin: 2em;
+            padding: 1em;
+            border-radius: .5em;
+            text-align: left;
+        }
+
+        .child1 {
+            background: DarkRed;
+        }
+
+        .child2 {
+            background: DarkMagenta;
+        }
+
+        .child3 {
+            background: DarkOliveGreen;
+        }
+        input {
+            padding: .2em;
+            font-size: 2rem;
+        }
+        button:active {
+            background-color: #fff;
+        }
+        button {
+            background: #333;
+            color: #fff;
+            padding: .8em;
+            font-size: large;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: #333;">Let's get some <span style="color:DarkMagenta">Moooooony</span>!!!</h1>
+    <div class="div">
+        <div class="div-child child1">
+            <h3>Deposit</h3>
+            <h1>$<span id="deposit-bord">00</span></h1>
+        </div>
+        <div class="div-child child2">
+            <h3>Withdraw</h3>
+            <h1>$<span id="withdraw-bord">00</span></h1>
+        </div>
+        <div class="div-child child3">
+            <h3>Balance</h3>
+            <h1>$<span id="balance-bord">00</span></h1>
+        </div>
+
+    </div>
+
+    <div class="div2">
+        <div class="div-child child1">
+            <h2>Deposit Amount</h2>
+            <input id="Deposit-amount" placeholder="$ inter amount"  type="text"><br><br>
+            <button id="deposit-btn">Deposit</button>
+        </div>
+        <div class="div-child child2">
+            <h2>Withdraw Amount</h2>
+            <input id="withdraw-amount" placeholder="$ inter amount" type="text"><br><br>
+            <button id="withdraw-btn">Withdraw</button>
+        </div>
+    </div>
+    <script src="home.js"></script>
+</body>
+
+</html>
