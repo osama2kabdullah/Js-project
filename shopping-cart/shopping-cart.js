@@ -1,53 +1,48 @@
-function updateCounter(condition, product, price){
-    const countInput = document.getElementById(product + '-count');
-    // const PhonCountValue = phoneCount.value;
-    if(condition == true){
-        countInput.value = parseInt(countInput.value) + 1;
-    }else if(countInput.value >= 2){
-        countInput.value = parseInt(countInput.value) - 1;
-    }
-    const Total = document.getElementById(product + '-total');
-    Total.innerText = parseInt(countInput.value) * price;
-    // subtotal 
-    updatePrice();
-}
+const input1 = document.getElementById('first-input');
+const price1 = document.getElementById('price1');
 
-// subtotal 
-function updatePrice(){
-    const phoneCountValue = parseInt(document.getElementById('phone-count').value) * 1219;
-    const caseCountValue = parseInt(document.getElementById('case-count').value) * 59;
-    
-    const subTotal = document.getElementById('sub-total');
-    subTotal.innerText = phoneCountValue + caseCountValue;
-    
-    // vat 
-    const vatBord = document.getElementById('vat-total');
-    const vat = (parseInt(subTotal.innerText) * 2) / 100;
-    vatBord.innerText = parseInt(vat);
-    
-    // finul total 
-    const _total = document.getElementById('total-price');
-    _total.innerText = parseInt(subTotal.innerText) + parseInt(vatBord.innerText);
-}
-
-// btn handlr plus and minus
-document.getElementById('phone-plus-Btn').addEventListener('click', function(){
-    updateCounter(true, 'phone', 1219);
+const subTotal = document.getElementById('sub-total');
+const tax = document.getElementById('tax');
+const _total = document.getElementById('total-price')
+// plus btn 
+document.getElementById('first-plus-btn').addEventListener('click', function(){
+  input1.value = parseFloat(input1.value) + 1;
+  price1.innerText = (parseFloat(input1.value) * 132.43).toFixed(2);
+  subTotal.innerText = (parseFloat(price1.innerText) + parseFloat(price2.innerText)).toFixed(2);
+  tax.innerText = ((parseFloat(subTotal.innerText) * 4) / 100).toFixed(2);
+  _total.innerText = (parseFloat(subTotal.innerText) + parseFloat(tax.innerText)).toFixed(2);
 })
-document.getElementById('phone-minus-Btn').addEventListener('click', function(){
-    updateCounter(false, 'phone', 1219);
-})
-document.getElementById('case-plus-Btn').addEventListener('click', function(){
-    updateCounter(true, 'case', 59);
-})
-document.getElementById('case-minus-Btn').addEventListener('click', function(){
-    updateCounter(false, 'case', 59);
+document.getElementById('first-minus-btn').addEventListener('click', function(){
+  if(input1.value <= 1){
+    return;
+  }
+  input1.value = parseFloat(input1.value) - 1;
+  price1.innerText = (parseFloat(input1.value) * 132.43).toFixed(2);
+  subTotal.innerText = (parseFloat(price1.innerText) + parseFloat(price2.innerText)).toFixed(2);
+  tax.innerText = ((parseFloat(subTotal.innerText) * 4) / 100).toFixed(2);
+  _total.innerText = (parseFloat(subTotal.innerText) + parseFloat(tax.innerText)).toFixed(2);
 })
 
-// remove item by click 
-document.getElementById('cross-2').addEventListener('click', function(){
-    document.getElementById('cart-2').style.display = 'none';
+const input2 = document.getElementById('second-input');
+const price2 = document.getElementById('price2');
+document.getElementById('second-plus-btn').addEventListener('click', function(){
+  input2.value = parseFloat(input2.value) + 1;
+  price2.innerText = (parseFloat(input2.value) * 242.32).toFixed(2);
+  subTotal.innerText = (parseFloat(price1.innerText) + parseFloat(price2.innerText)).toFixed(2);
+  tax.innerText = ((parseFloat(subTotal.innerText) * 4) / 100).toFixed(2);
+  _total.innerText = (parseFloat(subTotal.innerText) + parseFloat(tax.innerText)).toFixed(2);
 })
-document.getElementById('cross-1').addEventListener('click', function(){
-    document.getElementById('cart-1').style.display = 'none';
+document.getElementById('second-minus-btn').addEventListener('click', function(){
+  if(input2.value <= 1){
+    return;
+  }
+  input2.value = parseFloat(input2.value) - 1;
+  price2.innerText = (parseFloat(input2.value) * 242.32).toFixed(2);
+  subTotal.innerText = (parseFloat(price1.innerText) + parseFloat(price2.innerText)).toFixed(2);
+  tax.innerText = ((parseFloat(subTotal.innerText) * 4) / 100).toFixed(2);
+  _total.innerText = (parseFloat(subTotal.innerText) + parseFloat(tax.innerText)).toFixed(2);
 })
+
+subTotal.innerText = (parseFloat(price1.innerText) + parseFloat(price2.innerText)).toFixed(2);
+tax.innerText = ((parseFloat(subTotal.innerText) * 4) / 100).toFixed(2);
+_total.innerText = (parseFloat(subTotal.innerText) + parseFloat(tax.innerText)).toFixed(2);

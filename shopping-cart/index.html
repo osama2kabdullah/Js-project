@@ -1,86 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-   <title>Shopping Cart</title>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
-   <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping cart</title>
+    <!-- font awsopme  -->
+    <script src="https://kit.fontawesome.com/cd37335466.js" crossorigin="anonymous"></script>
+    <!-- tailwind css  -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
 
-   <section>
-      <div class="container">
-         <h2>My shopping cart</h2>
-         <div class="cart">
-            <div class="col-md-12 col-lg-10 mx-auto">
-               <div id="cart-1" class="cart-item">
-                  <div class="row">
-                     <div class="col-md-7 center-item">
-                        <img src="images/product-1.png" alt="">
-                        <h5>iPhone 11 128GB Black</h5>
-                     </div>
-
-                     <div class="col-md-5 center-item">
-                        <div class="input-group number-spinner">
-                           <button id="phone-minus-Btn" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input id="phone-count" type="number" min="0" class="form-control text-center" value="1" disabled>
-                           <button id="phone-plus-Btn" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                        </div>
-                        <h5>$<span id="phone-total">1219</span></h5>
-                        <img id="cross-1" src="images/remove.png" alt="" class="remove-item">
-                     </div>
-                  </div>
-               </div>
-
-               <div id="cart-2" class="cart-item">
-                  <div class="row">
-                     <div class="col-md-7 center-item mx-auto">
-                        <img src="images/product-2.png" alt="">
-                        <h5>iPhone 11 Silicone Case - Black</h5>
-                     </div>
-                     <div class="col-md-5 center-item">
-                        <div class="input-group number-spinner">
-                           <button id="case-minus-Btn" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input id="case-count" type="number" min="0" class="form-control text-center" value="1" disabled>
-                           <button id="case-plus-Btn" class="btn btn-default"><i class="fas fa-plus"></i></button>
-
-                        </div>
-                        <h5>$<span id="case-total">59</span></h5>
-                        <img id="cross-2" src="images/remove.png" alt="" class="remove-item">
-                     </div>
-                  </div>
-               </div>
-
-               <div class="cart-item">
-                  <div class="row">
-
-                     <div class="col-md-8">
-                        <h5>Subtotal: </h5>
-                        <h5>Tax:</h5>
-                        <h5>Total:</h5>
-                     </div>
-
-                     <div class="col-md-4 status">
-                        <h5>$<span id='sub-total'>1278</span></h5>
-                        <h5>$<span id='vat-total'>38</span></h5>
-                        <h5>$<span id='total-price'>1316</span></h5>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-12 pt-4 pb-4">
-                  <button type="button" class="btn btn-success check-out">Check Out</button>
-               </div>
+    <main class="m-8 ">
+        <h1 class="text-5xl font-sens">My shopping cart</h1>
+        <div class="grid gap-4 grid-cols-3 mt-8 text-2xl bg-slate-700 rounded text-gray-50">
+            <img class="object-cover p-2 h-50 w-96 rounded" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1658331042-1628030398-hoka-mach-4-ec-162803-1658330983.jpg?crop=1xw:1xh;center,top&resize=480%3A%2A" alt="">
+            <div class=" p-8 ">
+                <h2 class="text-3xl">Mizuno Wave Rider 25</h2>
+                <p class="text-xl mt-2 font-mono">Price: $132.43</p><br>
+                <div class="flex items-center">
+                    <button id="first-minus-btn" class="h-8 bg-neutral-400 w-8 text-center m-2 active:bg-violet-700">-</button>
+                    
+                    <input id="first-input" class="h-8 w-8 outline-none border-none text-slate-900 text-center text-lg"type="text" value="1">
+                    
+                    <button id="first-plus-btn" class="h-8 bg-neutral-400 w-8 text-center m-2 active:bg-violet-700">+</button>
+                </div>
             </div>
-         </div>
-      </div>
-   </section>
-   
-<script src="shopping-cart.js"></script>
+            <div class=" p-8 flex flex-col text-end">
+                <h2 class="text-2xl font-mono">Total price</h2><br><p class="text-xl font-mono">$<span id="price1">132.43</span></p>
+            </div>
+        </div>
+        <div class="grid gap-4 grid-cols-3 mt-8 text-2xl bg-slate-700 rounded text-gray-50">
+            <img class="object-cover p-2 h-50 w-96 rounded" src="https://media.istockphoto.com/photos/running-shoes-picture-id1249496770?b=1&k=20&m=1249496770&s=170667a&w=0&h=_SUv4odBqZIzcXvdK9rqhPBIenbyBspPFiQOSDRi-RI=" alt="">
+            <div class=" p-8 ">
+                <h2 class="text-3xl">Fabrics Sneaker Shoes</h2>
+                <p class="text-xl mt-2 font-mono">Price: $242.32</p><br>
+                <div class="flex items-center">
+                    <button id="second-minus-btn" class="h-8 bg-neutral-400 w-8 text-center m-2 active:bg-violet-700">-</button>
+                    
+                    <input id="second-input" class="h-8 w-8 outline-none border-none text-slate-900 text-center text-lg"type="text" value="1">
+                    
+                    <button id="second-plus-btn" class="h-8 bg-neutral-400 w-8 text-center m-2 active:bg-violet-700">+</button>
+                </div>
+            </div>
+            <div class=" p-8 flex flex-col text-end">
+                <h2 class="text-2xl font-mono">Total price</h2><br><p class="text-xl font-mono">$<span id="price2">242.32</span></p>
+            </div>
+        </div>
+        
+        <div class="mt-8 p-8 text-2xl bg-slate-700 rounded text-gray-50">
+            <div class="flex gap-8 ">
+                <div>
+                    <h3 class="uppercase text-sky-500 text-2xl font-semibold">Sub Total <span class="font-thin text-2xl font-mono  text-slate-200">$</span><span class=" font-thin font-mono text-2xl text-slate-200" id="sub-total">132.43</span></h3>
+                    
+                    <h3 class="uppercase text-sky-500 text-2xl font-semibold">Tax <span class="font-thin text-2xl font-mono  text-slate-200">$</span><span class=" font-thin font-mono text-2xl text-slate-200" id="tax">11.21</span></h3>
+                    
+                    <h3 class="uppercase text-sky-500 text-2xl font-semibold">Total <span class="font-thin text-2xl font-mono  text-slate-200">$</span><span class=" font-thin font-mono text-2xl text-slate-200" id="total-price">1231.23</span></h3>
+                </div>
+            </div>
+            <div>
+                <button class="rounded-non font-mono e bg-neutral-400 mt-8 p-1 text-base  active:bg-violet-700">Check out</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="shopping-cart.js"></script>
 </body>
 
 </html>
