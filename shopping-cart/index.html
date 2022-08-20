@@ -16,8 +16,9 @@
 
     <main class="m-8 ">
         <h1 class="text-5xl font-sens">My shopping cart</h1>
-        <div class="grid gap-4 grid-cols-3 mt-8 text-2xl bg-slate-700 rounded text-gray-50">
-            <img class="object-cover p-2 h-50 w-96 rounded" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1658331042-1628030398-hoka-mach-4-ec-162803-1658330983.jpg?crop=1xw:1xh;center,top&resize=480%3A%2A" alt="">
+        <p class="text-xl camelcase text-red-500 mt-4">To remove product, just double click on product photo.</p>
+        <div id="frst-parent" class="grid gap-4 grid-cols-3 mt-8 text-2xl bg-slate-700 rounded text-gray-50">
+            <img id="img1" class="object-cover p-2 h-50 w-96 rounded" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1658331042-1628030398-hoka-mach-4-ec-162803-1658330983.jpg?crop=1xw:1xh;center,top&resize=480%3A%2A" alt="">
             <div class=" p-8 ">
                 <h2 class="text-3xl">Mizuno Wave Rider 25</h2>
                 <p class="text-xl mt-2 font-mono">Price: $132.43</p><br>
@@ -33,8 +34,8 @@
                 <h2 class="text-2xl font-mono">Total price</h2><br><p class="text-xl font-mono">$<span id="price1">132.43</span></p>
             </div>
         </div>
-        <div class="grid gap-4 grid-cols-3 mt-8 text-2xl bg-slate-700 rounded text-gray-50">
-            <img class="object-cover p-2 h-50 w-96 rounded" src="https://media.istockphoto.com/photos/running-shoes-picture-id1249496770?b=1&k=20&m=1249496770&s=170667a&w=0&h=_SUv4odBqZIzcXvdK9rqhPBIenbyBspPFiQOSDRi-RI=" alt="">
+        <div id="second-parent" class="grid gap-4 grid-cols-3 mt-8 text-2xl bg-slate-700 rounded text-gray-50">
+            <img id="img2" class="object-cover p-2 h-50 w-96 rounded" src="https://media.istockphoto.com/photos/running-shoes-picture-id1249496770?b=1&k=20&m=1249496770&s=170667a&w=0&h=_SUv4odBqZIzcXvdK9rqhPBIenbyBspPFiQOSDRi-RI=" alt="">
             <div class=" p-8 ">
                 <h2 class="text-3xl">Fabrics Sneaker Shoes</h2>
                 <p class="text-xl mt-2 font-mono">Price: $242.32</p><br>
@@ -62,7 +63,7 @@
                 </div>
             </div>
             <div>
-                <button class="rounded-non font-mono e bg-neutral-400 mt-8 p-1 text-base  active:bg-violet-700">Check out</button>
+                <button id="check-out" class="rounded-non font-mono e bg-lime-400 text-slate-900 mt-8 p-1 text-base  active:bg-violet-700">Check out</button>
             </div>
         </div>
     </main>
