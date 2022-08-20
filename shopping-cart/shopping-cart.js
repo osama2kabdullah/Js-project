@@ -46,3 +46,16 @@ document.getElementById('second-minus-btn').addEventListener('click', function()
 subTotal.innerText = (parseFloat(price1.innerText) + parseFloat(price2.innerText)).toFixed(2);
 tax.innerText = ((parseFloat(subTotal.innerText) * 4) / 100).toFixed(2);
 _total.innerText = (parseFloat(subTotal.innerText) + parseFloat(tax.innerText)).toFixed(2);
+
+// product hide functionality 
+document.getElementById('img1').addEventListener('dblclick', function(){
+  document.getElementById('frst-parent').style.display = 'none';
+})
+document.getElementById('img2').addEventListener('dblclick', function(){
+  document.getElementById('second-parent').style.display = 'none';
+})
+
+// check out page click 
+document.getElementById('check-out').addEventListener('click', function(){
+  window.location.href='checkOut.html'
+})
