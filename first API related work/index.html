@@ -12,11 +12,14 @@
         #container {
             display: grid;
             grid-gap: 2em;
-            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-columns: auto auto auto auto;
             padding: 2em;
             margin: 2em;
         }
         #fullResult {
+            margin-left: 4em;
+        }
+        #resultFor {
             margin-left: 4em;
         }
         @media only screen and (max-width: 620px) {
@@ -29,6 +32,9 @@
             #fullResult {
                 margin-left: 0em;
             }
+            #resultFor {
+            margin-left: .2em;
+        }
         }
     </style>
 </head>
@@ -42,6 +48,12 @@
             <button onclick="srcBtn()" class="btn btn-outline-secondary" type="button"
                 id="button-addon2">search</button>
         </div>
+        <h6 id="no-keyWord" style="display: none; text-align: center; color: red;">please type a keyword</h6>
+    </div>
+    <!-- result for field  -->
+    <div id="resultFor">
+        <h5>Results for: <i style="color: brown" id="showing-keyword"></i></h5>
+        <h6 id="no-food" style="display: none; text-align: center; color: red; margin: 2em">No such food found</h6>
     </div>
     <!-- selected item  -->
     <div id="fullResult">
