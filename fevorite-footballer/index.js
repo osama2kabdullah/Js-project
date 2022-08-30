@@ -1,6 +1,12 @@
+// press Enter for search 
+const input = document.getElementById('input');
+input.addEventListener('keypress', function(event){
+    if(event.key === 'Enter'){
+        searchBtn();
+    }
+})
 // btn clcik 
 function searchBtn() {
-    const input = document.getElementById('input');
     const url = `https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${input.value}`
 
     fetch(url)
